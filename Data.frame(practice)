@@ -1,0 +1,82 @@
+rm(list=ls())
+#Dataframes
+a <- c(4.68,66.71,28.56)
+as.data.frame(a)
+a
+a = as.data.frame(a)
+a
+str(a)
+class(a)
+
+# changing rownames and column names
+rownames(a)
+colnames(a)
+rownames(a) = c("sample-1","sample-2","sample-3")
+a
+colnames(a) = c("A")
+a
+
+#to delete
+colnames(a) = NULL
+a
+
+
+#
+a$A
+a$A*2 #multiply by 2
+sum(a$A)
+
+# adding more data
+a$D = c(66,77,88)
+a
+
+a$F = a$A + a$D
+a
+a$D*3 # adding more info
+a$D^2 # adding more info
+a
+str(a)
+class(a)
+
+#a different way
+G = c(3.4,44,55)
+a = cbind(a,G)
+a
+
+a = rbind(a,G)
+a
+
+# delete
+a$G = NULL
+a
+row.names(a)[4] = "sample-4"
+a
+
+nrow(a)
+ncol(a)
+
+dim(a)
+
+rowMeans(a)
+colMeans(a)
+rowSums(a)
+colSums(a)
+summary(a)
+summary (c(1,20,10000))
+
+a$I = c("car","pen","paper","book")
+a
+
+rownames(a) = c("NEW-1","NEW-2","NEW-3","NEW-4")
+a
+
+ncol(a)
+P<- c("Kiwi","orange","grapes","papaya")
+a = rbind(a,P)
+a
+rownames(a) = c("NEW-1","NEW-2","NEW-3","NEW-4","NEW-5")
+row.names(a)[5] = "NEW-5"
+row.names(a)[6] = "NEW-6"
+a
+a = a[-5,]
+a
